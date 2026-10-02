@@ -1,0 +1,2 @@
+# vendored files to be ignored from github language statistics
+research/paper/IEEEtran.bst linguist-vendored=true

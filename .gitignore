@@ -1,0 +1,92 @@
+# latex
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.brf
+*.cb
+*.cb2
+*.fdb_latexmk
+*.fls
+*.fmt
+*.fot
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+
+# output
+*.pdf
+
+# compiled object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# precompiled headers
+*.gch
+*.pch
+
+# compiled libraries
+*.so
+*.dylib
+*.dll
+*.lai
+*.la
+*.a
+*.lib
+
+# executables
+*.exe
+*.app
+*.out
+
+# cmake 
+build/
+build-*/
+out/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+
+# byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# distribution
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# jupyter notebooks
+.ipynb_checkpoints/
+
+# os / editor
+.DS_Store
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json

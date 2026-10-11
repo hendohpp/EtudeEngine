@@ -90,3 +90,7 @@ ENV/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
+
+# testing and linting
+.pytest_cache/
+.ruff_cache/

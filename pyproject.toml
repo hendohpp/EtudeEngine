@@ -2,6 +2,7 @@
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
+
 [project]
 name = "etude-engine"
 version = "0.1.0"
@@ -14,10 +15,32 @@ dependencies = [
     "numpy>=1.26.0",
 ]
 
+
+# deps not required to run main project
 [project.optional-dependencies]
 dev = [
     "pytest>=8.0.0",
+    "ruff>=0.2.0",
 ]
 
+
+# package source dir
 [tool.setuptools.packages.find]
 where = ["src"]
+
+
+# target version for syntax parsing 
+# run manually 'ruff check .' 'ruff check --fix .'
+[tool.ruff]
+target-version = "py313"
+line-length = 88
+
+
+# active linter rules 
+[tool.ruff.lint]
+# E, W: PEP 8 style guide compliance
+# F: detect logical errors, unused includes, undefined vars, etc.
+# I: sort and organize includes
+# UP: modernize syntax
+select = ["E", "W", "F", "I", "UP"]
+ignore = []

@@ -53,5 +53,15 @@ USER vscode
 RUN python3 -m venv /home/vscode/venv
 ENV PATH="/home/vscode/venv/bin:$PATH"
 
+# create container build dir
+RUN mkdir -p /tmp/etude-build/src
+
+# copy project files into container build dir
+COPY --chown=vscode:vscode pyproject.toml README.md /tmp/etude-build/
+COPY --chown=vscode:vscode src/ /tmp/etude-build/src/
+
+# install base and dev dependencies
+RUN pip install --no-cache-dir -e "/tmp/etude-build[dev]"
+
 # set internal default shell 
 ENV SHELL=/bin/bash

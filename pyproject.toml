@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "etude-engine"
+version = "0.1.0"
+description = "Adaptive music practice generation engine"
+readme = "README.md"
+# single source of truth for dependencies
+# if contributing please add deps here.
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
